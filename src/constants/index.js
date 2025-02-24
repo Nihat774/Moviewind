@@ -5,3 +5,9 @@ export const navLinks = [
     { id: 4, path: "/", name: "Series" },
     { id: 5, path: "/", name: "Others" },
   ];
+
+  export  const headerData = [
+    {path:"/about",name:"About"},
+    {path:"/contact",name:"Contact"},
+    {path:"/privacy",name:"Privacy"}
+]
