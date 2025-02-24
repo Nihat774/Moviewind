@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
-    <div className=" mx-auto">
-      <h1 className="text-4xl font-bold mb-3">Contact Us</h1>
+    <div className=" mx-auto min-h-[80vh] md:min-h-[70vh] flex flex-col justify-center">
+      <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
       <p className="text-lg mb-3">
         If you have any questions or suggestions, feel free to reach out to us!
       </p>

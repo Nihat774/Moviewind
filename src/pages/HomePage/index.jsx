@@ -43,11 +43,11 @@ function Home() {
                 to={`/${item.id}`}
                 className="border-dashed border rounded-xl border-white"
               >
-                <div>
+                <div className="md:h-[50vh] h-[30vh]">
                   <img
                     src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                     alt="Movie Poster"
-                    className="md:h-[50vh] h-[30vh] w-full rounded-xl"
+                    className="h-full md:object-cover w-full rounded-xl"
                   />
                 </div>
                 <div className="p-3">
