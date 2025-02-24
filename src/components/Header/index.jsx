@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { BsList } from "react-icons/bs";
-import { IoCloseCircle, IoSearch } from "react-icons/io5";
+import { IoClose, IoCloseCircle, IoSearch } from "react-icons/io5";
 import { RiCloseLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux"; 
 import { setQuery } from "../../redux/searchSlice"; 
 import { navLinks } from "../../constants";
+import { IoMdClose } from "react-icons/io";
 
 function Header() {
   const dispatch = useDispatch()
@@ -90,11 +91,9 @@ function Header() {
 
       {isOpenSearch ? (
         <>
-          <div className="absolute top-[40px] right-[20px]">
-          <div className="flex justify-end">
-          <IoCloseCircle className="text-2xl" onClick={()=>setIsOpenSearch(!isOpenSearch)}/>
-          </div>
-            <label className="input bg-slate-800 rounded-lg w-[70vw] ">
+          <div className="fixed top-[40px] right-[10px] flex items-center gap-2">
+         
+            <label className="input bg-slate-800 rounded-lg w-[80vw] focus:outline-none">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,12 +112,16 @@ function Header() {
               </svg>
               <input
                 type="search"
-                className="grow"
+                className="grow focus:outline-none"
                 value={inputText}
                 onChange={(e) => handleChange(e)}
                 placeholder="Search"
               />
             </label>
+            <div className="">
+          <IoMdClose className="text-2xl cursor-pointer bg-white text-slate-800  rounded-md " onClick={()=>setIsOpenSearch(!isOpenSearch)}/>
+          </div>
+          {/* <IoMdClose /> */}
           </div>
         </>
       ) : null}
